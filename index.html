@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodieExpress | Online Food Ordering</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            Foodie<span>Express</span>
+        </a>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <i class="bi bi-list"></i>
+        </label>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="south-indian.html">South Indian</a>
+            <a href="north-indian.html">North Indian</a>
+            <a href="trending.html">Trending</a>
+            <a href="offers.html">Offers</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- ================= HOME IMAGE SLIDER ================= -->
+
+<section class="home-slider">
+
+    <div class="slider-track">
+
+        <!-- SLIDE 1 -->
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+                 alt="Delicious Indian Food">
+
+            <div class="slide-content">
+                <span class="hero-tag">Welcome to FoodieExpress</span>
+                <h1>Delicious Food Delivered To Your Doorstep!</h1>
+                <p>Enjoy fresh, tasty and delicious food from your favourite restaurants.</p>
+                <a href="restaurants.html" class="slide-btn">Order Now</a>
+            </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641"
+                 alt="Indian Chicken Biryani">
+
+            <div class="slide-content">
+                <span class="hero-tag">Special South Indian Taste</span>
+                <h1>Enjoy Authentic Chicken Biryani</h1>
+                <p>Discover delicious biryani, dosa, meals and many more dishes.</p>
+                <a href="south-indian.html" class="slide-btn">Explore Food</a>
+            </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+                 alt="Delicious Burger">
+
+            <div class="slide-content">
+                <span class="hero-tag">Trending Foods</span>
+                <h1>Fresh Burgers And Tasty Fast Food</h1>
+                <p>Discover your favourite foods and enjoy every bite.</p>
+                <a href="trending.html" class="slide-btn">Explore Trending</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WELCOME SECTION ================= -->
+
+<section class="welcome-section">
+    <div class="container text-center">
+
+        <h2 class="section-title">
+            Welcome to <span>FoodieExpress</span>
+        </h2>
+
+        <p class="welcome-text">
+            Your favourite food is just one click away!
+            Order delicious South Indian, North Indian and trending foods
+            from FoodieExpress. Enjoy fresh food delivered to your doorstep.
+        </p>
+
+        <a href="restaurants.html" class="main-btn">
+            Explore Restaurants
+        </a>
+
+    </div>
+</section>
+
+
+<!-- ================= FOOD CATEGORIES ================= -->
+
+<section class="category-section">
+    <div class="container">
+
+        <h2 class="section-title">
+            Explore Our <span>Food Categories</span>
+        </h2>
+
+        <p class="section-subtitle">
+            Choose your favourite food category
+        </p>
+
+        <div class="row g-4">
+
+            <!-- SOUTH INDIAN -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="category-card">
+
+                    <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976"
+                         alt="South Indian Food">
+
+                    <div class="category-content">
+                        <h4>South Indian Food</h4>
+                        <p>Dosa, Idli, Pongal, Meals and Biryani.</p>
+                        <a href="south-indian.html" class="card-btn">
+                            Explore Now
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- NORTH INDIAN -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="category-card">
+
+                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d"
+                         alt="North Indian Food">
+
+                    <div class="category-content">
+                        <h4>North Indian Food</h4>
+                        <p>Paneer, Butter Naan, Curry and more.</p>
+                        <a href="north-indian.html" class="card-btn">
+                            Explore Now
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TRENDING -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="category-card">
+
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+                         alt="Trending Burger">
+
+                    <div class="category-content">
+                        <h4>Trending Foods</h4>
+                        <p>Burgers, Pizza, Sandwiches and Desserts.</p>
+                        <a href="trending.html" class="card-btn">
+                            Explore Now
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= POPULAR FOODS ================= -->
+
+<section class="popular-section">
+    <div class="container">
+
+        <h2 class="section-title">
+            Our <span>Popular Foods</span>
+        </h2>
+
+        <p class="section-subtitle">
+            Taste the most loved dishes from our menu
+        </p>
+
+        <div class="row g-4">
+
+            <!-- MASALA DOSA -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="food-card">
+
+                    <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/06/masala-dosa-recipe.jpg"
+                         alt="Masala Dosa">
+
+                    <div class="p-3">
+                        <span class="food-label">Popular</span>
+                        <h4>Masala Dosa</h4>
+                        <p>Crispy dosa served with potato masala, chutney and sambar.</p>
+                        <div class="food-bottom">
+                            <h5>₹90</h5>
+                            <a href="south-indian.html" class="order-btn">View Menu</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CHICKEN BIRYANI -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="food-card">
+
+                    <img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/dindigul_chicken_biryani.jpg"
+                         alt="Dindigul Chicken Biryani">
+
+                    <div class="p-3">
+                        <span class="food-label">Chef Special</span>
+                        <h4>Dindigul Chicken Biryani</h4>
+                        <p>Authentic Seeraga Samba chicken biryani with rich spices.</p>
+                        <div class="food-bottom">
+                            <h5>₹220</h5>
+                            <a href="south-indian.html" class="order-btn">View Menu</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BURGER -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="food-card">
+
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+                         alt="Classic Burger">
+
+                    <div class="p-3">
+                        <span class="food-label">Trending</span>
+                        <h4>Classic Burger</h4>
+                        <p>Juicy burger with fresh vegetables and delicious sauce.</p>
+                        <div class="food-bottom">
+                            <h5>₹129</h5>
+                            <a href="trending.html" class="order-btn">View Menu</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- IDLI SAMBAR -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="food-card">
+
+                    <img src="https://images.surferseo.art/059ab000-e55c-4753-a81e-8625fac289dc.jpeg"
+                         alt="Idli Sambar">
+
+                    <div class="p-3">
+                        <span class="food-label">South Indian</span>
+                        <h4>Idli Sambar</h4>
+                        <p>Soft idlis served with hot sambar and coconut chutney.</p>
+                        <div class="food-bottom">
+                            <h5>₹60</h5>
+                            <a href="south-indian.html" class="order-btn">View Menu</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- PANEER -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="food-card">
+
+                    <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7"
+                         alt="Paneer Butter Masala">
+
+                    <div class="p-3">
+                        <span class="food-label">North Indian</span>
+                        <h4>Paneer Butter Masala</h4>
+                        <p>Rich and creamy paneer curry with aromatic spices.</p>
+                        <div class="food-bottom">
+                            <h5>₹180</h5>
+                            <a href="north-indian.html" class="order-btn">View Menu</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- PIZZA -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="food-card">
+
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591"
+                         alt="Cheese Pizza">
+
+                    <div class="p-3">
+                        <span class="food-label">Trending</span>
+                        <h4>Cheese Pizza</h4>
+                        <p>Delicious pizza topped with cheese and fresh vegetables.</p>
+                        <div class="food-bottom">
+                            <h5>₹199</h5>
+                            <a href="trending.html" class="order-btn">View Menu</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="restaurants.html" class="main-btn">
+                View All Restaurants
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= SPECIAL OFFER ================= -->
+
+<section class="home-offer-section">
+    <div class="container">
+
+        <div class="home-offer">
+
+            <div>
+                <span class="offer-small">Limited Time Offer</span>
+                <h2>Get 25% OFF on Your First Order!</h2>
+                <p>Enjoy your favourite food with exciting discounts.</p>
+                <h4>Use Code: WELCOME25</h4>
+                <a href="offers.html" class="offer-btn">View All Offers</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="why-section">
+    <div class="container">
+
+        <h2 class="section-title">
+            Why Choose <span>FoodieExpress?</span>
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-card">
+                    <i class="bi bi-truck"></i>
+                    <h4>Fast Delivery</h4>
+                    <p>Get your favourite food delivered quickly to your doorstep.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-card">
+                    <i class="bi bi-egg-fried"></i>
+                    <h4>Fresh Food</h4>
+                    <p>Enjoy delicious food prepared fresh with quality ingredients.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-card">
+                    <i class="bi bi-tags"></i>
+                    <h4>Best Offers</h4>
+                    <p>Enjoy exciting discounts and special offers on your orders.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= CALL TO ACTION ================= -->
+
+<section class="cta-section">
+    <div class="container text-center">
+
+        <h2>Hungry? Let's Order Your Favourite Food!</h2>
+
+        <p>Explore our delicious menu and enjoy tasty food today.</p>
+
+        <a href="restaurants.html" class="cta-btn">
+            Order Your Food
+        </a>
+
+    </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row gy-4">
+
+            <!-- BRAND -->
+            <div class="col-lg-4 col-md-6">
+                <h3>FoodieExpress</h3>
+                <p>
+                    Delicious food delivered fresh to your doorstep.
+                    Enjoy South Indian, North Indian and trending foods.
+                </p>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="col-lg-4 col-md-6">
+                <h4>Quick Links</h4>
+
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="south-indian.html">South Indian</a></li>
+                    <li><a href="north-indian.html">North Indian</a></li>
+                    <li><a href="trending.html">Trending</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="col-lg-4 col-md-12">
+                <h4>Contact & Address</h4>
+
+                <p><i class="bi bi-geo-alt-fill"></i>
+                    MG Road, Bengaluru, Karnataka 560001, India
+                </p>
+
+                <p><i class="bi bi-telephone-fill"></i>
+                    +91 98765 43210
+                </p>
+
+                <p><i class="bi bi-envelope-fill"></i>
+                    support@foodieexpress.example
+                </p>
+
+                <p><i class="bi bi-clock-fill"></i>
+                    Open: 9 AM – 11 PM
+                </p>
+            </div>
+
+        </div>
+
+        <hr class="footer-line">
+
+        <div class="footer-bottom">
+            <p>© 2026 FoodieExpress. All Rights Reserved.</p>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

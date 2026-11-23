@@ -1,0 +1,906 @@
+
+/* =========================================
+   FOODIEEXPRESS - COMPLETE HOME PAGE CSS
+   HTML + CSS + BOOTSTRAP | NO JAVASCRIPT
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* BASIC SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fffaf5;
+    color: #292929;
+    line-height: 1.6;
+}
+
+:root {
+    --orange: #fc8019;
+    --dark-orange: #e96b08;
+    --cream: #fff3e5;
+    --dark: #252525;
+    --white: #ffffff;
+    --gray: #777777;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    background: #ffffff;
+    padding: 17px 0;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    font-size: 27px;
+    font-weight: 800;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.navbar-brand span {
+    color: var(--orange);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--orange);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 29px;
+    color: var(--orange);
+    cursor: pointer;
+}
+
+/* =========================================
+   HOME AUTOMATIC IMAGE SLIDER
+========================================= */
+
+.home-slider {
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    animation: foodSlider 18s infinite;
+}
+
+.slide {
+    width: 33.333333%;
+    height: 100%;
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.72),
+        rgba(0,0,0,0.15)
+    );
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.slide-content h1 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.slide-content p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.slide-btn {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    padding: 13px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.slide-btn:hover {
+    background: var(--dark-orange);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* SLIDER ANIMATION */
+
+@keyframes foodSlider {
+
+    0%, 28% {
+        transform: translateX(0);
+    }
+
+    33%, 61% {
+        transform: translateX(-33.333333%);
+    }
+
+    66%, 94% {
+        transform: translateX(-66.666666%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcome-section {
+    padding: 65px 0;
+    background: #ffffff;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.section-title span {
+    color: var(--orange);
+}
+
+.welcome-text {
+    max-width: 750px;
+    margin: 0 auto 25px;
+    color: var(--gray);
+    font-size: 15px;
+}
+
+.main-btn {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background: var(--dark-orange);
+    color: white;
+}
+
+/* =========================================
+   COMMON SECTION SUBTITLE
+========================================= */
+
+.section-subtitle {
+    color: var(--gray);
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 14px;
+}
+
+/* =========================================
+   CATEGORY SECTION
+========================================= */
+
+.category-section {
+    padding: 65px 0;
+    background: var(--cream);
+}
+
+.category-card {
+    height: 100%;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.13);
+}
+
+.category-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.category-content {
+    padding: 22px;
+    text-align: center;
+}
+
+.category-content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.category-content p {
+    color: var(--gray);
+    font-size: 14px;
+    min-height: 45px;
+}
+
+.card-btn {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    text-decoration: none;
+    padding: 9px 22px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.card-btn:hover {
+    background: var(--dark-orange);
+    color: white;
+}
+
+/* =========================================
+   POPULAR FOOD SECTION
+========================================= */
+
+.popular-section {
+    padding: 65px 0;
+    background: #fffaf5;
+}
+
+/* FOOD CARDS */
+
+.food-card {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.09);
+    border: 1px solid #eeeeee;
+    transition: 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.14);
+}
+
+.food-card img {
+    display: block;
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+}
+
+.food-card h4 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 12px 0;
+    color: var(--dark);
+}
+
+.food-card p {
+    color: var(--gray);
+    font-size: 13px;
+    min-height: 48px;
+}
+
+.food-label {
+    display: inline-block;
+    background: #fff0df;
+    color: var(--dark-orange);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.food-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.food-bottom h5 {
+    color: var(--orange);
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.order-btn {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    padding: 9px 17px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: var(--dark-orange);
+    color: white;
+}
+
+/* =========================================
+   SPECIAL OFFER SECTION
+========================================= */
+
+.home-offer-section {
+    padding: 55px 0;
+    background: white;
+}
+
+.home-offer {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 45px;
+    border-radius: 20px;
+    color: white;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.82),
+            rgba(0,0,0,0.25)
+        ),
+        url('https://images.unsplash.com/photo-1498837167922-ddd27525d352')
+        center/cover no-repeat;
+}
+
+.offer-small {
+    display: inline-block;
+    background: var(--orange);
+    padding: 7px 14px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.home-offer h2 {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.home-offer p {
+    font-size: 15px;
+}
+
+.home-offer h4 {
+    font-size: 20px;
+    color: #ffd09f;
+    font-weight: 700;
+    margin: 15px 0 20px;
+}
+
+.offer-btn {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    padding: 11px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.offer-btn:hover {
+    background: var(--dark-orange);
+    color: white;
+}
+
+/* =========================================
+   WHY CHOOSE US
+========================================= */
+
+.why-section {
+    padding: 65px 0;
+    background: var(--cream);
+}
+
+.benefit-card {
+    height: 100%;
+    padding: 30px 22px;
+    background: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-7px);
+}
+
+.benefit-card i {
+    font-size: 42px;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.benefit-card h4 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* =========================================
+   CALL TO ACTION
+========================================= */
+
+.cta-section {
+    padding: 65px 15px;
+    background: linear-gradient(120deg, #fc8019, #ffad5c);
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.cta-section p {
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: white;
+    color: var(--dark-orange);
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: var(--dark);
+    color: white;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #222222;
+    color: white;
+    padding: 50px 0 15px;
+    text-align: left;
+}
+
+.footer h3 {
+    color: var(--orange);
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.footer h4 {
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.footer p {
+    color: #dddddd;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.footer p i {
+    color: var(--orange);
+    margin-right: 7px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #dddddd;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--orange);
+    padding-left: 5px;
+}
+
+/* SOCIAL MEDIA */
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #383838;
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--orange);
+    color: white;
+}
+
+.footer-line {
+    border-color: #777777;
+    margin: 30px 0 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-up {
+    animation: fadeUp 1s ease forwards;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease forwards;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .navbar .container {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        width: 100%;
+        padding: 20px 0 5px;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .home-slider {
+        height: 430px;
+    }
+
+    .slide-content h1 {
+        font-size: 36px;
+    }
+
+    .category-card img {
+        height: 200px;
+    }
+
+    .food-card img {
+        height: 210px;
+    }
+
+    .home-offer h2 {
+        font-size: 29px;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .navbar {
+        padding: 13px 0;
+    }
+
+    .navbar-brand {
+        font-size: 23px;
+    }
+
+    .menu-icon {
+        font-size: 27px;
+    }
+
+    .home-slider {
+        height: 350px;
+    }
+
+    .slide-content {
+        left: 6%;
+        right: 6%;
+        max-width: 90%;
+    }
+
+    .slide-content h1 {
+        font-size: 27px;
+    }
+
+    .slide-content p {
+        font-size: 14px;
+    }
+
+    .hero-tag {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+    .slide-btn {
+        padding: 10px 22px;
+        font-size: 13px;
+    }
+
+    .welcome-section,
+    .category-section,
+    .popular-section,
+    .why-section {
+        padding: 45px 0;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .welcome-text {
+        font-size: 13px;
+    }
+
+    .category-card img {
+        height: 210px;
+    }
+
+    .food-card img {
+        height: 220px;
+    }
+
+    .home-offer {
+        padding: 30px 20px;
+        min-height: 280px;
+    }
+
+    .home-offer h2 {
+        font-size: 25px;
+    }
+
+    .home-offer p {
+        font-size: 13px;
+    }
+
+    .cta-section h2 {
+        font-size: 25px;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 40px 15px 15px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .navbar-brand {
+        font-size: 21px;
+    }
+
+    .home-slider {
+        height: 290px;
+    }
+
+    .slide-content h1 {
+        font-size: 22px;
+    }
+
+    .slide-content p {
+        font-size: 12px;
+        margin-bottom: 17px;
+    }
+
+    .slide-btn {
+        padding: 9px 18px;
+        font-size: 12px;
+    }
+
+    .section-title {
+        font-size: 23px;
+    }
+
+    .category-content h4,
+    .food-card h4 {
+        font-size: 17px;
+    }
+
+    .food-card img {
+        height: 190px;
+    }
+
+    .home-offer h2 {
+        font-size: 22px;
+    }
+
+    .home-offer h4 {
+        font-size: 17px;
+    }
+
+    .cta-section h2 {
+        font-size: 22px;
+    }
+
+    .footer h3 {
+        font-size: 24px;
+    }
+}
